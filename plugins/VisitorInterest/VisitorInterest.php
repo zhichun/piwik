@@ -36,16 +36,12 @@ class VisitorInterest extends \Piwik\Plugin
 
     public static function headerVisitsFrequency(&$out)
     {
-        $out = '<div id="leftcolumn">';
+      //  $out = '<div id="leftcolumn">';
     }
 
     public static function footerVisitsFrequency(&$out)
     {
-        $out = '</div>
-			<div id="rightcolumn">
-			';
         $out .= FrontController::getInstance()->fetchDispatch('VisitorInterest', 'index');
-        $out .= '</div>';
     }
 
     public function extendVisitorDetails(&$visitor, $details)
